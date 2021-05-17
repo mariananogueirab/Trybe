@@ -1,0 +1,27 @@
+body{
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+nav ul{
+    list-style-type: none;
+    border: 1px solid black;
+    text-align: center;
+    background-color: black;
+    
+}
+
+nav li, a{
+    display: inline;
+    margin-right: 30px;
+    color: white;
+    list-style: none;
+}
+
+#esqueleto, #olhos, #stromatopoda{
+    width: 500px;
+    margin-left: 200px;
+}
