@@ -14,14 +14,43 @@ nav ul{
     
 }
 
-nav li, a{
+nav li{
     display: inline;
     margin-right: 30px;
-    color: white;
     list-style: none;
+}
+li a{
+     color: white;
 }
 
 #esqueleto, #olhos, #stromatopoda{
     width: 500px;
     margin-left: 200px;
+}
+
+aside{
+    display: block;
+    border: 1px solid black;
+    float:right;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+article{
+    display: block;
+    border: 1px solid black;
+    float:left;
+    width: 70%;
+    margin-left: 30px;
+    padding: 15px;
+}
+
+main{
+    display: inline-block;
+}
+
+footer{
+    text-align: center;
 }
