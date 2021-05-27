@@ -9,7 +9,6 @@ function palindromo (string) {
     }
     return true
 }
-
 console.log(palindromo('arara'))
 
 
@@ -22,7 +21,50 @@ function maiorValor (numeros) {
         }
     }
 }
-
-
  console.log(maiorValor([10, 15, 3, 6, 9]))
+
+// Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+function biggerName(name) {
+    let bigName = name[0];
+    let nameArray = '';
+    for (let index = 0; index < name.length; index += 1) {
+        nameArray = name[index];
+        if ( nameArray.length > bigName.length) {
+            bigName = nameArray;
+
+        } if (nameArray.length < bigName.length) {
+            bigName = bigName;
+        }
+}
+    return bigName
+}
+console.log(biggerName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+
+
+
+
+
+
+
+function biggerName(name) {
+    let bigName = name[0];
+    let nameArray = '';
+    let finalName = '';
+    for (let index = 0; index < name.length; index += 1) {
+        nameArray = name[index];
+        if ( nameArray.length > bigName.length) {
+            bigName = nameArray;
+        } if (nameArray.length === bigName.length && nameArray != bigName){
+            finalName = bigName + 'e' + finalName + ' e ' + nameArray;
+        } if (nameArray.length < bigName.length) {
+            bigName = bigName;
+        }
+}
+    return finalName
+}
+console.log(biggerName(['José', 'Lucas', 'Nádia', 'Ana', 'Cairo', 'Joana']));
+
+
+// Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
 
