@@ -25,11 +25,11 @@ function createDaysOfTheMonth() {
         daysItem.innerText = monthDays;
         daysItem.className = 'day';
 
-        if (index === 24 || index === 25 || index === 31) {
+        if (index === 24 + 1 || index === 25 + 1 || index === 31 + 1) {
             daysItem.className += ' holiday'
         }
 
-        if (index === 4 || index === 11 | index === 18 || index === 25) {
+        if (index === 4 + 1 || index === 11 + 1 | index === 18 + 1 || index === 25 + 1) {
             daysItem.className += ' friday';
         }
 
@@ -40,15 +40,65 @@ function createDaysOfTheMonth() {
 createDaysOfTheMonth();
 
 //Exercicio 2:
+const buttonsContainer = document.querySelector('.buttons-container');
 
 function createButtonFeriados (feriados) {
     let btnHoliday = document.createElement('button');
     btnHoliday.type = 'button';
     btnHoliday.innerText = feriados;
     btnHoliday.id = 'btn-holiday';
-    let buttonsContainer = document.querySelector('.buttons-container');
     buttonsContainer.appendChild(btnHoliday);
 }
 
 createButtonFeriados('Feriados');
+
+// Exercício 3:
+
+let buttonHolidays = document.querySelector('#btn-holiday');
+let classHoliday = document.querySelectorAll('.holiday');  
+
+buttonHolidays.addEventListener('click', function () {
+    for (let index = 0; index < classHoliday.length; index += 1) {
+       if (classHoliday[index].style.backgroundColor === 'green') {
+       classHoliday[index].style.backgroundColor = 'rgb(238,238,238)';
+       } else {
+        classHoliday[index].style.backgroundColor = 'green';
+       }
+    }
+});
+
+// exercício 4:
+
+ function createButtonFriday (friday) {
+    let btnFriday = document.createElement('button');
+    btnFriday.type = 'button';
+    btnFriday.innerText = friday;
+    btnFriday.id = 'btn-friday';
+    buttonsContainer.appendChild(btnFriday);
+}
+
+createButtonFriday('Sexta-feira');
+
+// Exercicio 5:
+
+let classFridays = document.querySelectorAll('.friday');
+let buttonFridays = document.querySelector('#btn-friday');
+let buttonFridaysStatus = false;
+
+let escutador = buttonFridays.addEventListener('click', addFriday);
+
+function addFriday() {
+    for (let index = 0; index < classFridays.length; index += 1) {
+        classFridays[index].innerText = 'SEXTOU!!!';
+        buttonFridaysStatus = true;
+    } 
+    /* if (buttonFridaysStatus === true) {
+        classFridays[index].innerText = parseInt(daysItem[index].previousElementSibling.innerText, 10) + 1;
+    }
+
+    buttonFridaysStatus = !buttonFridaysStatus; */
+}
+// Exercício 6:
+
+
 
