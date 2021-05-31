@@ -17,7 +17,7 @@ createDaysOfTheWeek();
 
 function createDaysOfTheMonth() {
     const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-    const monthDaysList = document.querySelector('.days-container');
+    const monthDaysList = document.querySelector('#days');
 
     for (let index = 0; index < dezDaysList.length; index += 1) {
         let monthDays = dezDaysList[index];
@@ -83,7 +83,7 @@ createButtonFriday('Sexta-feira');
 
 let classFridays = document.querySelectorAll('.friday');
 let buttonFridays = document.querySelector('#btn-friday');
-let buttonFridaysStatus = false;
+let buttonFridaysStatus = true;
 
 buttonFridays.addEventListener('click', addFriday);
 
@@ -94,22 +94,68 @@ function addFriday() {
 
         if (buttonFridaysStatus === true) {
            classFridays[index].innerText = statusFiday;
-           buttonFridaysStatus = false;
+           
         } else {
-            classFridays[index].innerText = statusInicial;
-            buttonFridaysStatus = true;
+            classFridays[index].innerText = parseInt(document.getElementsByClassName('friday')[index].previousSibling.innerText) + 1;
         }
-        
-        
-       
     } 
-    /* if (buttonFridaysStatus === true) {
-        classFridays[index].innerText = parseInt(daysItem[index].previousElementSibling.innerText, 10) + 1;
-    }
-
-    buttonFridaysStatus = !buttonFridaysStatus; */
+    buttonFridaysStatus = !buttonFridaysStatus;
 }
+
 // Exercício 6:
 
+/* let classDay = document.querySelectorAll('.day');
+console.log(classDay) */
 
+function zoomDay (event) {
+    console.log(event.target);
+    event.target.style.fontSize = '40px';
+}
+let daysconteiner = document.querySelector('#days')
+daysconteiner.addEventListener('mouseover', zoomDay);
 
+function zoomOut (event) {
+    console.log(event.target);
+    event.target.style.fontSize = '18px';
+}
+// a função é filha do eventListener, ela pega o alvo do evento e muda ele, ai não precisa colocar pra ir um por um
+daysconteiner.addEventListener('mouseout', zoomOut);
+
+// Exercício 7:
+
+let myTasks = document.querySelector('.my-tasks');
+
+function addTasks (taskFrase) {
+    let task = document.createElement('span');
+    //let breakLine = document.createElement('br');
+    task.innerText = taskFrase;
+    myTasks.appendChild(task);
+    //myTasks.appendChild(breakLine);
+}
+
+addTasks('Gym');
+//addTasks('Study');
+
+// Exercício 8:
+
+function addLegend (cor) {
+    let div = document.createElement('div');
+    div.className = 'task';
+    div.style.backgroundColor = cor;
+    myTasks.appendChild(div);
+}
+
+addLegend('pink');
+
+// Exercício 9:
+let taskLegend = document.querySelector('.task');
+
+function addClassSelected () {
+    if (taskLegend.className === 'task') {
+        taskLegend.className.add('selected');
+    } else {
+        taskLegend.className.remove('selected');
+    }
+}
+// não tá funcionando;
+taskLegend.addEventListener('click', addClassSelected);
