@@ -85,12 +85,23 @@ let classFridays = document.querySelectorAll('.friday');
 let buttonFridays = document.querySelector('#btn-friday');
 let buttonFridaysStatus = false;
 
-let escutador = buttonFridays.addEventListener('click', addFriday);
+buttonFridays.addEventListener('click', addFriday);
 
 function addFriday() {
     for (let index = 0; index < classFridays.length; index += 1) {
-        classFridays[index].innerText = 'SEXTOU!!!';
-        buttonFridaysStatus = true;
+        let statusInicial = classFridays[index].innerText;
+        let statusFiday = 'SEXTOU!!!';
+
+        if (buttonFridaysStatus === true) {
+           classFridays[index].innerText = statusFiday;
+           buttonFridaysStatus = false;
+        } else {
+            classFridays[index].innerText = statusInicial;
+            buttonFridaysStatus = true;
+        }
+        
+        
+       
     } 
     /* if (buttonFridaysStatus === true) {
         classFridays[index].innerText = parseInt(daysItem[index].previousElementSibling.innerText, 10) + 1;
