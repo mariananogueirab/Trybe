@@ -7,6 +7,9 @@
     <title>Form Currículo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
 </head>
 <body>
   <header class="container">
@@ -65,13 +68,14 @@
         
       <br>
       <label for="data-inicio" class="col-sm-2 col-form-label">Data de ínicio:</label>
-      <input type="text" name="data-inicio" class="form-control" id="data-inicio" required>
+      <input type="text" name="data-inicio" class="form-control" id="datepicker" required>
     </fieldset>
 
     <button id="button-submit" class="btn btn-dark">Enviar</button>
   </form>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
   <script src="script.js"></script>
+ 
 </body>
 </html>

@@ -36,33 +36,12 @@ for (let key in estadosBR) {
   estados.appendChild(option);
 }
 
-let nome = document.querySelector('#input-name');
-let email = document.querySelector('#input-email');
-let cpf = document.querySelector('#input-cpf');
-let endereco = document.querySelector('#input-end');
-let cidade = document.querySelector('#input-cidade');
-let estado = document.querySelector('#input-estado');
-let typeHouse = document.getElementsByName('casa-apt');
-// tipo radio pega o input pelo name.
 
-let dataInicio = document.querySelector('#data-inicio');
 let buttonEnviar = document.querySelector('#button-submit');
+
 buttonEnviar.addEventListener('click', (event) => {
   event.preventDefault();
-  let nomeOk = false;
-  let data = dataInicio.value;
-  let dia = parseInt(data.slice(0,2));
-  let mes = parseInt(data.slice(3,5));
-  let ano = parseInt(data.slice(6));
-  if (nome.value != null) {
-    
-    
-    
-  if (dia > 0 && dia <= 31 && mes > 0 && mes <= 12 && ano > 0) {}  
-        
-  }
-  
 })
 
 
-
+let picker = new Pikaday({ field: document.getElementById('datepicker') });
