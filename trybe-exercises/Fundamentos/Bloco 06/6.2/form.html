@@ -6,66 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Currículo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <form action="" method="GET">
-      <fieldset class="formulario">
-        <label for="input-name">Nome:</label>
-        <input type="text" name="nome" id="input-name" maxlength="40" required>
+  <header class="container">
+    <h1>Formulário:</h1>
+  </header>
+  
+  <form action="" method="GET">
+    <fieldset class="container">
+      <label for="input-name" class="col-sm-2 col-form-label">Nome:</label>
+      <input type="text" name="nome" id="input-name" class="form-control" maxlength="40" required>
         
-        <br>
-        <label for="input-email">E-mail:</label>
-        <input type="email" name="email" id="input-email" maxlength="50" required>
+      <br>
+      <label for="input-email" class="col-sm-2 col-form-label">E-mail:</label>
+      <input type="email" name="email" id="input-email" class="form-control" maxlength="50" required>
          
-        <br>
-        <label for="input-cpf">CPF:</label>
-        <input type="text" name="cpf" id="input-cpf" maxlength="11" required>
+      <br>
+      <label for="input-cpf" class="col-sm-2 col-form-label">CPF:</label>
+      <input type="text" name="cpf" id="input-cpf" class="form-control" maxlength="11" required>
            
-        <br>
-        <label for="input-end">Endereço:</label>
-        <input type="text" name="end" id="input-end" maxlength="200" required>
+      <br>
+      <label for="input-end" class="col-sm-2 col-form-label">Endereço:</label>
+      <input type="text" name="end" id="input-end" class="form-control" maxlength="200" required>
            
-        <br>
-        <label for="input-cidade">Cidade:</label>
-        <input type="text" name="cidade" id="input-cidade" maxlength="28" required>
+      <br>
+      <label for="input-cidade" class="col-sm-2 col-form-label">Cidade:</label>
+      <input type="text" name="cidade" id="input-cidade" class="form-control" maxlength="28" required>
            
-        <br>
-        <label for="input-estado">Estado:</label>
-        <select name="estado" id="input-estado"></select>
-        
-        <br>
-        <input type="radio" name="casa-apt" id="input-casa" value="casa" required>
-        <label for="input-casa">Casa</label>
+      <br>
+      <label for="input-estado" class="col-sm-2 col-form-label">Estado:</label>
+      <select name="estado" id="input-estado"></select>
+    </fieldset>    
+      <br>
+    <fieldset class="form-check container">
+      <input type="radio" name="casa-apt" id="input-casa" value="casa" required>
+      <label for="input-casa">Casa</label>
 
-        <br>
-        <input type="radio" name="casa-apt" id="input-apt" value="apartamento" required>
-        <label for="input-apt">Apartamento</label>
-        
-      </fieldset>
+      <br>
+      <input type="radio" name="casa-apt" id="input-apt" value="apartamento" required>
+      <label for="input-apt">Apartamento</label>
+    </fieldset>    
+    
       <br>
       <br>
-      <fieldset class="formulario">
-        <label for="resumo-curriculo">Resumo do currículo:</label>
-        <br>
-        <textarea name="curriculo" id="resumo-curriculo" cols="30" rows="10" maxlength="100" required></textarea>
+    <fieldset class="container">
+      <label for="resumo-curriculo" class="col-sm-2 col-form-label">Resumo do currículo:</label>
+      <br>
+      <textarea name="curriculo" id="resumo-curriculo" class="form-control" cols="30" rows="10" maxlength="100" required></textarea>
         
-        <br>
-        <label for="input-cargo">Cargo:</label>
-        <input type="text" name="cargo" id="input-cargo" maxlength="40" required>
+      <br>
+      <label for="input-cargo" class="col-sm-2 col-form-label">Cargo:</label>
+      <input type="text" name="cargo" id="input-cargo" class="form-control" maxlength="40" required>
         
-        <br>
-        <label for="descricao-cargo">Descrição do Cargo:</label>
-        <input type="text" name="descricao-cargo" id="descricao-cargo" maxlength="500" required>
+      <br>
+      <label for="descricao-cargo" class="col-sm-2 col-form-label">Descrição do Cargo:</label>
+      <input type="text" name="descricao-cargo" id="descricao-cargo" class="form-control" maxlength="500" required>
         
-        <br>
-        <label for="data-inicio">Data de ínicio:</label>
-        <input type="text" name="data-inicio" id="data-inicio" required>
-      </fieldset>
+      <br>
+      <label for="data-inicio" class="col-sm-2 col-form-label">Data de ínicio:</label>
+      <input type="text" name="data-inicio" class="form-control" id="data-inicio" required>
+    </fieldset>
 
-      <button id="button-submit">Enviar</button>
-    </form>
+    <button id="button-submit" class="btn btn-dark">Enviar</button>
+  </form>
 
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
