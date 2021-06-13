@@ -39,18 +39,18 @@ for (let key in estadosBR) {
 
 let nome = document.querySelector('#input-name');
 
-nome.addEventListener('keyup', () => {
+/* nome.addEventListener('keyup', () => {
   let nomeVerify = nome.value.trim();
   console.log(nomeVerify.length)
   if (nomeVerify.length > 0 && nomeVerify.length < 40) {
     return nome.value; 
   }
   alert('Nome Inválido');
-})
+}) */
 
 let email = document.querySelector('#input-email');
 
-email.addEventListener('keyup', () => {
+/* email.addEventListener('keyup', () => {
   let emailVerify = email.value.trim();
   console.log(emailVerify);
   console.log(emailVerify.match(/@/g));
@@ -59,8 +59,9 @@ email.addEventListener('keyup', () => {
   } 
     alert('E-mail inválido');
 })
-
+ */
 let cpf = document.querySelector('#input-cpf');
+
 let endereco = document.querySelector('#input-end');
 let cidade = document.querySelector('#input-cidade');
 let estado = document.querySelector('#input-estado');
@@ -71,9 +72,34 @@ let descricaoCargo = document.querySelector('#descricao-cargo');
 let dataInicio = document.querySelector('#data-inicio');
 let buttonEnviar = document.querySelector('#button-submit');
 let buttonLimpar = document.querySelector('#button-limpar')
+let todosOsDados = [nome, email, cpf, endereco, cidade, estado, typeHouse, resumo, cargo, descricaoCargo, dataInicio];
+let consolidado = document.querySelector('#consolidado').innerText;
 
 buttonEnviar.addEventListener('click', (event) => {
   event.preventDefault();
+  if (nome.value.trim().length > 0 && nome.value.trim().length < 40) {
+    if (email.value.trim().length > 0 && email.value.trim().length < 50) {
+      if (cpf.value.trim().length === 11) {
+        if (endereco.value.trim().length > 0 && endereco.value.trim().length < 200) {
+          console.log('Tudo Ok');
+         
+        for(let index = 0; index < todosOsDados.length; index += 1) {
+          consolidado += todosOsDados[index].value;
+            
+
+          }
+
+          consolidado.innerText = consolidate()
+          
+        }
+      }
+    }
+  } else {
+    console.log('Nok');
+  }
+
+
+
 
 /*   let nomeOk = false;
   let data = dataInicio.value;
