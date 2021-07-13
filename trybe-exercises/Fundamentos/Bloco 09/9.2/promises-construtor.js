@@ -15,3 +15,6 @@ const promise = new Promise((resolve, reject) => {
   }
   resolve(console.log(`Que sucesso =) nosso número foi ${number}`));
 });
+
+// Quando a função é mal sucedida, o output lança um erro.
+// Repare também como usamos o return antes do reject para interromper a execução da função. Dessa forma o uso do else se torna desnecessário.
