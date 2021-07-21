@@ -1,22 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+// antigamente todo arquivo react tinha que fazer o import do react, ficar de olho
 
-function App() {
-  return (
+function App() { // componente react
+  return ( // posso colocar o que eu quiser. é um componente react
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p> Hello World! </p>
       </header>
     </div>
   );
