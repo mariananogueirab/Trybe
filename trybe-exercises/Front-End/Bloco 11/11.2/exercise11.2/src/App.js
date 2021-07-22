@@ -4,7 +4,10 @@ import PokemonMap from './PokemonMap';
 
 function App() {
   return (
-    <PokemonMap />
+    <div>
+      <h1 className='title'>Pokedex</h1>
+      <PokemonMap />
+    </div>
   );
 }
 

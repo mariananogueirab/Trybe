@@ -41,3 +41,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.title {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
